@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>🌸 Customer Program Management</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <!-- Animated header -->
+  <marquee behavior="scroll" direction="left" class="marquee">
+    Welcome to Iron Lady Program Management Platform! 🚀 Manage Customers, Programs & Payments Easily!
+  </marquee>
+
+  <div class="container">
+    <h1>Customer Program Management</h1>
+
+    <!-- Add / Update Form -->
+    <div class="form-section card">
+      <h2>Add / Update Customer</h2>
+      <input type="hidden" id="custId">
+      <div class="form-grid">
+        <input type="text" id="name" placeholder="Full Name">
+        <input type="email" id="email" placeholder="Email">
+        <input type="text" id="phone" placeholder="Phone">
+        <input type="number" id="age" placeholder="Age">
+        <input type="text" id="gender" placeholder="Gender">
+        <input type="text" id="address" placeholder="Address">
+        <select id="program_name">
+          <option value="Full Stack Developer">Full Stack Developer</option>
+          <option value="Data Science">Data Science</option>
+          <option value="Web Development">Web Development</option>
+          <option value="AI & ML">AI & ML</option>
+        </select>
+        <input type="text" id="category" placeholder="Category">
+        <input type="number" id="duration_weeks" placeholder="Duration (weeks)">
+        <input type="date" id="start_date">
+        <input type="date" id="end_date">
+        <select id="status">
+          <option value="Active">Active</option>
+          <option value="Inactive">Inactive</option>
+          <option value="Completed">Completed</option>
+          <option value="Pending">Pending</option>
+        </select>
+        <input type="number" id="progress_percent" placeholder="Progress %">
+        <input type="number" id="fee_paid" placeholder="Fee Paid">
+        <input type="number" id="total_fee" placeholder="Total Fee">
+        <select id="payment_status">
+          <option value="Paid">Paid</option>
+          <option value="Partial">Partial</option>
+          <option value="Pending">Pending</option>
+        </select>
+        <input type="text" id="notes" placeholder="Notes">
+      </div>
+      <button class="submit-btn" onclick="submitCustomer()">Submit</button>
+    </div>
+
+    <!-- Customer List -->
+    <h2>Customer List</h2>
+    <table id="customerTable" class="card table-card">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Programs</th>
+          <th>Status</th>
+          <th>Progress</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+<script src="/static/script.js"></script>
+</body>
+</html>
